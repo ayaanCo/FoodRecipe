@@ -1,0 +1,152 @@
+/* ===== Overall Page ===== */
+.home {
+    background: linear-gradient(to bottom, #1a1a1a, #2a2a2a); /* Dark gradient background */
+    font-family: 'Segoe UI', sans-serif;
+    color: #e0e0e0; /* Default text color for dark theme */
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.fade-up {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding:180px 10%;
+    background: #222222; /* Darker background for hero */
+    border-bottom: 1px solid #444; /* Darker border */
+   
+}
+
+.hero-content {
+    flex: 1 1 250px;
+    animation: fadeIn 1s ease-in-out;
+   
+}
+
+.hero-content h4 {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Lighter grey for subtitle */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #f0f0f0; /* Lighter heading color */
+    margin: 10px 0;
+}
+
+.hero-content p {
+    color: #cccccc; /* Lighter text for paragraph */
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta {
+    padding: 12px 24px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Darker blue gradient */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 86, 179, 0.4); /* Stronger shadow for dark bg */
+}
+
+.cta:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #0056b3, #003a75); /* Even darker blue on hover */
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+    width: 100%; 
+  
+}
+
+
+/* ===== Featured Section ===== */
+.featured-section {
+    background: linear-gradient(135deg, #1f1f1f, #2f2f2f); /* Dark gradient background */
+    min-height: 100vh;
+    animation: fadeSlide 0.8s ease-in-out;
+    color: #e0e0e0; /* Default text color */
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* Lighter heading color */
+    position: relative;
+    top: 30px;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2rem)
+}
+
+.featured-section h2::after {
+    content: '';
+    display: block;
+    margin: 8px auto 0;
+    width: 60px;
+    height: 4px;
+    background: #0099ff; /* Brighter blue for underline */
+    border-radius: 10px;
+}
+
+/* ===== Recipe Grid ===== */
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 50px 4%;
+    }
+
+    .hero-content,
+    .hero-image {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .featured-section h2{
+        top: 0px;
+    }
+  
+}

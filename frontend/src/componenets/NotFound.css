@@ -1,0 +1,60 @@
+.notfound-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a; /* Dark background */
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.notfound-title {
+    font-size: 120px;
+    color: #ff8c8c; /* Lighter red for visibility on dark background */
+    animation: float 2s infinite ease-in-out;
+}
+
+.notfound-message {
+    font-size: 20px;
+    color: #e0e0e0; /* Light text for readability */
+    margin-bottom: 20px;
+}
+
+.notfound-link {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ff8c8c; /* Lighter red for the button */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.notfound-link:hover {
+    background-color: #ff6b6b; /* Slightly darker red on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

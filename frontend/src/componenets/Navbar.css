@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgb(23, 23, 23); /* fallback in case video doesn't load */
+    color: #f0f0f0; /* Default text color for dark theme */
+}
+
+/* Transparent Glass Navbar (Always) */
+.navbar {
+ position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 12px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+   max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.navbar-brand {
+ 
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #fdfdfd; /* light color like in your image */
+  text-decoration: none;
+}
+
+.hub
+{
+ color: #ffa500;
+}
+/* Toggle Button */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: #eaeaea;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Link Styling */
+.navbar-menu a,
+.logout-link {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 6px 4px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline Animation */
+.navbar-menu a::after,
+.logout-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffa500;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.logout-link:hover {
+  color: #ffa500;
+}
+
+.navbar-menu a:hover::after,
+.logout-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+   
+.navbar-container {
+   width: 90%;
+ 
+}
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid #eaeaea;
+    padding-top: 10px;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-menu li {
+    justify-content: flex-start;
+  }
+}
