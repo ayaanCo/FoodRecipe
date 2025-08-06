@@ -37,7 +37,7 @@ const AddRecipe = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/recipes', {
+      const response = await fetch('https://foodrecipe-rug5.onrender.com/recipes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(recipeData)
