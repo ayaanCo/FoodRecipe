@@ -10,7 +10,7 @@ const [Recipes, setRecipes] = useState([]);
 
       const handleFetchRecipes = async() => {  
           try {
-              const response =await fetch('http://localhost:5000/recipes'); // Replace with your API endpoint
+              const response =await fetch('https://foodrecipe-rug5.onrender.com/recipes'); // Replace with your API endpoint
               if (!response.ok) { 
                   throw new Error('Network response was not ok');
               }
