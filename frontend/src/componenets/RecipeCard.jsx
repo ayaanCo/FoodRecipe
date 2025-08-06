@@ -22,7 +22,7 @@ export default function RecipeCard({ recipe, setRecipes, showBtn, onUnlike }) {
 
   const handleCardClick = async (recipeId) => {
     try {
-      const res = await fetch(`http://localhost:5000/recipes/${recipeId}`);
+      const res = await fetch(`https://foodrecipe-rug5.onrender.com/recipes/${recipeId}`);
       if (!res.ok) throw new Error('Failed to fetch recipe details');
       const recipeData = await res.json();
       navigate('/recipe', { state: { recipeData } });
@@ -41,7 +41,7 @@ export default function RecipeCard({ recipe, setRecipes, showBtn, onUnlike }) {
     if (!window.confirm('Are you sure you want to delete this recipe?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/recipes/${recipeId}`, {
+      const res = await fetch(`https://foodrecipe-rug5.onrender.com/recipes/${recipeId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -58,7 +58,7 @@ export default function RecipeCard({ recipe, setRecipes, showBtn, onUnlike }) {
     if (!userId) return toast("Please login to like recipes");
 
     try {
-      const res = await fetch('http://localhost:5000/recipes/toggle', {
+      const res = await fetch('https://foodrecipe-rug5.onrender.com/recipes/toggle', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, productId: recipe._id }),
