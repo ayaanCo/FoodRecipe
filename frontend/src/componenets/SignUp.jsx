@@ -16,7 +16,7 @@ const SignUp = () => {
     const userData = { name,  email,  password  };
     try{
       
-  const res= await fetch('http://localhost:5000/user/signup', {
+  const res= await fetch('https://foodrecipe-rug5.onrender.com/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
