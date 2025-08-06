@@ -18,7 +18,7 @@ const Carousel = ({ images, interval = 3000 }) => {
   const handleCardClick = async (recipeId) => {
     try {
       
-      const res = await fetch(`http://localhost:5000/recipes/${recipeId}`);
+      const res = await fetch(`https://foodrecipe-rug5.onrender.com/recipes/${recipeId}`);
       if (!res.ok) throw new Error('Failed to fetch recipe details');
       const recipeData = await res.json();
         navigate('/recipe', { state: { recipeData } });
