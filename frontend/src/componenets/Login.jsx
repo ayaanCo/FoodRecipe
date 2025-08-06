@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault();
     try{
        
-  const res= await fetch('http://localhost:5000/user/login', {
+  const res= await fetch('https://foodrecipe-rug5.onrender.com/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
