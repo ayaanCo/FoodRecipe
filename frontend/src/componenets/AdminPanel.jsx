@@ -22,8 +22,8 @@ export default function AdminPanel() {
     const fetchData = async () => {
       try {
         const [recipeRes, userRes] = await Promise.all([
-          fetch('http://localhost:5000/recipes'),
-          fetch('http://localhost:5000/user'),
+          fetch('https://foodrecipe-rug5.onrender.com/recipes'),
+          fetch('https://foodrecipe-rug5.onrender.com/user'),
         ]);
 
         const recipeData = await recipeRes.json();
@@ -46,7 +46,7 @@ export default function AdminPanel() {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/recipes/${id}`, {
+      const res = await fetch(`https://foodrecipe-rug5.onrender.com/recipes/${id}`, {
         method: 'DELETE',
       });
 
