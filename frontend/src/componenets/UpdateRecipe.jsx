@@ -29,7 +29,7 @@ const navigate = useNavigate();
       ingredients: formData.ingredients.split(',').map(i => i.trim()),
     };
       try {
-  const response = await fetch(`http://localhost:5000/recipes/${recipe._id}`, {
+  const response = await fetch(`https://foodrecipe-rug5.onrender.com/recipes/${recipe._id}`, {
     method: 'PUT', // 👈 Use PUT instead of POST
     headers: {
       'Content-Type': 'application/json'
